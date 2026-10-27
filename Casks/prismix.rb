@@ -1,8 +1,8 @@
 # Cask for the tap rsx-xxx/homebrew-prismix (Casks/prismix.rb).
 # Per release: set `version` and `sha256` (shasum -a 256 Prismix.dmg).
 cask "prismix" do
-  version "0.0.32"
-  sha256 "35dbe7f6c30c212d73b5f4fef6bd21993dbe029fe0b6578ad2757f0bca836fe5"
+  version "0.0.33"
+  sha256 "ddbdba40ea40e07142485de1e3750bdd6c3c028dfd8352f574a76c662740e536"
 
   url "https://github.com/rsx-xxx/prismix/releases/download/v#{version}/Prismix.dmg"
   name "Prismix"
@@ -17,7 +17,7 @@ cask "prismix" do
   auto_updates true # the app updates itself; `brew upgrade --greedy` still works
 
   depends_on arch: :arm64
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Prismix.app"
 
