@@ -1,8 +1,8 @@
 # Cask for the tap rsx-xxx/homebrew-prismix (Casks/prismix.rb).
 # Per release: set `version` and `sha256` (shasum -a 256 Prismix.dmg).
 cask "prismix" do
-  version "0.0.49"
-  sha256 "2880fe98098e8c7fc647b46af43824da385ca629f97f442423f38d19668ed837"
+  version "0.0.50"
+  sha256 "d2e1362c9b7b1acb692cf69133ae592f647771988afab6ec060650e36fead428"
 
   url "https://github.com/rsx-xxx/prismix/releases/download/v#{version}/Prismix.dmg"
   name "Prismix"
@@ -22,8 +22,8 @@ cask "prismix" do
   app "Prismix.app"
 
   # The DMG is ad-hoc signed, not notarized (see packaging/SIGNING.md).
-  postflight do
-    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/Prismix.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Prismix.app"]
   end
 
   zap trash: "~/Library/Application Support/Prismix"
