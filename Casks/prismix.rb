@@ -1,8 +1,8 @@
 # Cask for the tap rsx-xxx/homebrew-prismix (Casks/prismix.rb).
 # Per release: set `version` and `sha256` (shasum -a 256 Prismix.dmg).
 cask "prismix" do
-  version "0.30.2"
-  sha256 "7652e75e74780cdb223b48eeb7da40009513da9ea6300d5b5dd4583987a21093"
+  version "0.30.3"
+  sha256 "aac8ff7ce8e4c41a4f363764fdf7fccaf9d467c19e3886d4685a39c51450ef8e"
 
   url "https://github.com/rsx-xxx/prismix/releases/download/v#{version}/Prismix.dmg"
   name "Prismix"
